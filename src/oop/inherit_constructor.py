@@ -77,9 +77,11 @@ def call(thing, method_name, *args, **kwargs):
     return method(thing, *args, **kwargs)
 
 # [call]
-examples = [make(Square, "sq", 3), make(Circle, "ci", 2)]
-for ex in examples:
-    n = ex["name"]
-    d = call(ex, "density", 5)
-    print(f"{n}: {d:.2f}")
+def test_main():
+    print()
+    examples = [make(Square, "sq", 3), make(Circle, "ci", 2)]
+    for ex in examples:
+        n = ex["name"]
+        d = call(ex, "density", 5)
+        print(f"{n}: {d:.2f}")
 # [/call]
